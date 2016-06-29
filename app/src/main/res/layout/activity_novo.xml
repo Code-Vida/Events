@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+            android:id="@+id/mainlo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:screenOrientation="portrait">
+
+            <!--TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome:" /-->
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_star"
+                android:layout_alignTop="@+id/ettitle"
+                android:layout_toLeftOf="@+id/etsnippet"
+                android:layout_toStartOf="@+id/etsnippet"
+                android:layout_marginTop="5dp" />
+            <EditText
+                android:id="@+id/ettitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do evento..."
+                android:maxLength="40"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/star"
+                android:layout_toEndOf="@+id/star" />
+
+            <!--TextView
+                android:id="@+id/descricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ettitle"
+                android:text="Descrição:" /-->
+            <ImageView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_info"
+                android:layout_alignBottom="@+id/etsnippet"
+                android:layout_alignLeft="@+id/progressBar"
+                android:layout_alignStart="@+id/progressBar"
+                android:layout_marginBottom="52dp" />
+            <EditText
+                android:id="@+id/etsnippet"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="Atrações do evento..."
+                android:lines="6"
+                android:layout_below="@+id/ettitle"
+                android:layout_toRightOf="@+id/info"
+                android:layout_toEndOf="@+id/info" />
+            <ImageView
+                android:id="@+id/local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_local"
+                android:textSize="7sp"
+                android:layout_below="@+id/etsnippet"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="true"
+                android:padding="3dp"
+                android:layout_alignRight="@+id/data"
+                android:layout_alignEnd="@+id/data" />
+
+
+            <EditText
+                android:id="@+id/etlocal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ex: Casa de Show..."
+                android:layout_alignTop="@+id/local"
+                android:layout_toRightOf="@+id/local"
+                android:layout_toEndOf="@+id/local" />
+
+            <ImageView
+                android:id="@+id/data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_calendario"
+                android:layout_alignTop="@+id/datePicker"
+                android:layout_toLeftOf="@+id/time"
+                android:layout_toStartOf="@+id/time"
+                android:layout_marginTop="50dp" />
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true"
+                android:layout_below="@+id/etlocal"
+                android:layout_toRightOf="@+id/data"
+                android:layout_toEndOf="@+id/data" />
+            <ImageView
+                android:id="@+id/hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hora"
+                android:layout_below="@+id/datePicker"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="50dp" />
+            <ImageView
+                android:id="@+id/open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_open"
+                android:layout_below="@+id/time"
+                android:layout_alignParentLeft="true" />
+            <TextView
+                android:id="@+id/txtopen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:text="Open Bar:"
+                android:layout_below="@+id/time"
+                android:layout_toRightOf="@+id/open" />
+
+            <CheckBox
+                android:id="@+id/openbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sim"
+                android:layout_below="@+id/time"
+                android:layout_toRightOf="@+id/txtopen"/>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_below="@+id/txtopen"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1">
+                <Button
+                    android:id="@+id/btnimagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_troca"
+                    android:onClick="loadImagefromGallery"
+                    android:layout_weight="4"
+                    android:text="Selecionar Imagem"
+                    android:textSize="7sp" />
+
+                <Button
+                    android:id="@+id/btnok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_ok"
+                    android:layout_weight="4"
+                    android:onClick="uploadImage"
+                    android:text="OK!"
+                    android:textSize="7sp" />
+            </LinearLayout>
+            <!--Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btncancelar"
+                android:text="Cancelar"
+                android:layout_below="@+id/btnimagem"
+                android:layout_toRightOf="@+id/btnok"/>
+           <! <TextView
+                android:id="@+id/txtPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:textSize="30dp"
+                android:text="face: "/-->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="35dp"
+                android:visibility="gone" />
+
+            <TimePicker
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="false"
+                android:timePickerMode="spinner"
+                android:nestedScrollingEnabled="false"
+                android:layout_below="@+id/datePicker"
+                android:layout_toRightOf="@+id/hora"
+                android:layout_toEndOf="@+id/hora" />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <!-- Side navigation drawer UI -->
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#ffeeeeee" />
+
+</android.support.v4.widget.DrawerLayout>
